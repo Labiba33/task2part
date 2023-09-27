@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1st javascript</title>
+</head>
+<body>
+<div id="output"></div>
+<script>
+
+  function displayText(text) {
+    const outputDiv = document.getElementById('output');
+    const paragraph = document.createElement('p');
+    paragraph.textContent = text;
+    outputDiv.appendChild(paragraph);
+  }
+
+  // String methods
+  const message = '  Hello World   ';
+  displayText(message.trim());
+  displayText(message.toLowerCase());
+  displayText(message.includes('Method'));
+  displayText(message.charAt(10));
+  displayText(message.replace('String', 'SM'));
+
+  // Number methods
+  const randomNumber = Math.random();
+  displayText(randomNumber);
+  displayText(randomNumber.toFixed(2));
+  displayText(parseInt('78'));
+  displayText(parseFloat('9,21'));
+  displayText(Number.isNaN('This is me Labiba'));
+
+  // Array methods
+  const names = ['Ben', 'Jim', 'Joe', 'Jenny', 'Alice'];
+  displayText(names.length);
+  displayText(names.reverse());
+  displayText(names.indexOf('Alice'));
+  displayText(names.join(' # '));
+  displayText(names.slice(1, 4));
+
+  // Date methods
+  const now = new Date();
+  displayText(now.toDateString());
+  displayText(now.getMonth());
+  displayText(now.getHours());
+  displayText(now.getMinutes());
+  displayText(now.getSeconds());
+
+  function toCelsius(f) {
+    return (5/9) * (f-32);
+}
+
+let value = toCelsius();
+  
+</script>
+</body>
+</html>
+
+
+
+    
